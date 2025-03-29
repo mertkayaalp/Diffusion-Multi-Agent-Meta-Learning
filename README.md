@@ -1,19 +1,25 @@
-# Diffusion-Multi-Agent-Meta-Learning
+# Diffusion-based Multi-Agent Meta-Learning
 
 Code repository for the paper [**Dif-MAML: Decentralized Multi-Agent Meta-Learning**](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9669064).
 
-## 🧾 Abstract
+## 🧾 Introduction
 
-The objective of meta-learning is to exploit knowledge obtained from observed tasks to improve adaptation to unseen tasks. Meta-learners are able to generalize better when they are trained with a larger number of observed tasks and with a larger amount of data per task. Given the amount of resources that are needed, it is generally difficult to expect the tasks, their respective data, and the necessary computational capacity to be available at a single central location. It is more natural to encounter situations where these resources are spread across several agents connected by some graph topology.
+This repository implements Dif-MAML (Diffusion-based Model-Agnostic Meta-Learning). Dif-MAML is a **decentralized multi-agent meta-learning algorithm**. [Classic MAML algorithm](https://proceedings.mlr.press/v70/finn17a.html) requires a single agent to train on all tasks. In contrast, Dif-MAML enables multiple agents, each having their own tasks and data, to cooperatively learn a shared initialization. Each agent computes local updates using its tasks, then averages those updates with neighbors. 
 
-The formalism of meta-learning is actually well-suited for this decentralized setting, where the learner benefits from information and computational power spread across the agents. Motivated by this observation, we propose a cooperative fully-decentralized multi-agent meta-learning algorithm, referred to as **Diffusion-based MAML (Dif-MAML)**.
+## Tasks and Datasets
 
-Decentralized optimization algorithms are superior to centralized implementations in terms of scalability, robustness, avoidance of communication bottlenecks, and privacy guarantees. The work provides a detailed theoretical analysis to show that the proposed strategy allows a collection of agents to attain agreement at a linear rate and to converge to a stationary point of the aggregate MAML objective even in non-convex environments. Simulation results illustrate the theoretical findings and the superior performance relative to the traditional non-cooperative setting.
+The experiments are divided into two categories. 
 
+### Regression
+- **Sine Function Regression:** Agents learn to predict sine functions of varying amplitudes and phases. Each agent sees different amplitude and phase ranges but cooperates via Dif-MAML algorithm to learn a shared launch model.
+
+### Few-Shot Classification
+- **Omniglot:** Character recognition tasks in 1- or 5-shot scenarios. Each agent has access to a subset of characters. 
+- **MiniImageNet:** ImageNet tasks (5-way, 1-shot or 5-shot). Each agent has access to a subset of classes and images.
 
 ## 📚 Citation
 
-🌟 *If you find this code and paper helpful in your research, please consider starring this repository and citing the following paper:*
+🌟 *If you find this code or approach helpful in your research, please consider starring this repository and citing the following paper:*
 
 ```bibtex
 @ARTICLE{kayaalp2022,
