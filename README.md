@@ -2,7 +2,7 @@
 
 Code repository for the paper [**Dif-MAML: Decentralized Multi-Agent Meta-Learning**](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9669064).
 
-## 🧾 Introduction
+## Introduction
 
 This repository implements Dif-MAML (Diffusion-based Model-Agnostic Meta-Learning). Dif-MAML is a **decentralized multi-agent meta-learning algorithm**. [Classic MAML algorithm](https://proceedings.mlr.press/v70/finn17a.html) requires a single agent to train on all tasks. In contrast, Dif-MAML enables multiple agents, each having their own tasks and data, to cooperatively learn a shared initialization. Each agent computes local updates using its tasks, then averages those updates with neighbors. 
 
