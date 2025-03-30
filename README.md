@@ -17,6 +17,10 @@ The experiments are divided into two categories.
 - **Omniglot:** Character recognition tasks in 1- or 5-shot scenarios. Each agent has access to a subset of characters. 
 - **MiniImageNet:** ImageNet tasks (5-way, 1-shot or 5-shot). Each agent has access to a subset of classes and images.
 
+## Single-Agent Meta-Learning
+
+This repository benefits from the single-agent MAML implementations at [**cbfinn/maml**](https://github.com/cbfinn/maml) and [**HilbertXu/MAML-Tensorflow**](https://github.com/HilbertXu/MAML-Tensorflow).
+
 ## 📚 Citation
 
 🌟 *If you find this code or approach helpful in your research, please consider starring this repository and citing the following paper:*
